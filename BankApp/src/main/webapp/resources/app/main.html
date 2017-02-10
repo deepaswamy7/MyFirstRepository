@@ -10,41 +10,116 @@
 <script src="resources/resources.javascript/app.js"></script>
 <script src="resources/resources.javascript/route.js"></script>
 </head>
+
 <style>
-ul {
+body {font-family: "Lato", sans-serif;}
+
+ul.tab {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
 }
 
-li {
-    float: left;
-}
+/* Float the list items side by side */
+ul.tab li {float: left;}
 
-li a {
-    display: block;
-    color: white;
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
 }
 
-li a:hover {
-    background-color: #111;
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
 }
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.topright {
+ float: right;
+ cursor: pointer;
+ font-size: 20px;
+}
+
+.topright:hover {color: red;}
 </style>
-</head>
 <body>
 
-<ul>
-  <li><a class="#home" href="#home">Home</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
+
+<ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTabs(event, 'Account')" id="defaultOpen">Account</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTabs(event, 'AccountDetails')">Add Recipients</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onclick="openTabs(event, 'ContactUs')">Transfer</a></li>
 </ul>
 
+<div id="Account" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+  <h3>Account</h3>
+  <form action="deposit">
+  Full Name: <input type="text" name="fullname"><br><br>
+  Account Number: <input type="number" name="accNum"><br><br>
+  Amount: <input type="number" name="amount"><br> <br>
+  Account Type: 
+  <select name="accType">
+    <option value="checking">Checking</option>
+    <option value="saving">Saving</option>
+  </select><br><br>
+  <input type="submit" value="Deposit">
+  
+  </form>
+</div>
+
+<div id="AddRecipients" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+  <h3>Add Recipients</h3>
+  <p>Please enter the Recipient Details</p>
+</div>
+
+<div id="Transfer" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
+  <h3>Transfer</h3>
+  <p>Transfer Amount</p>
+</div>
+
+<script>
+function openTabs(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
 </body>
 </html>
-
 
