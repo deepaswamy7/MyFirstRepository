@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Enrollmet system</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+
+  <style>
+div.background {
+  background: url(img\reg.jpg) repeat;
+
+}
+
+div.transbox {
+  margin: 30px;
+  background-size: 25%;
+  background-color: #ffffff;
+
+  opacity: 0.6;
+  filter: alpha(opacity=60); 
+}
+
+div.transbox p {
+  font-weight: bold;
+  font-size: 200%;
+  color: #000000;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+
+body { 
+ background: url(img/reg.jpg) no-repeat center center fixed; 
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
+
+</style>
+</head>
+<body>
+
+ <hgroup>
+		 <img src="img/log.PNG" alt="logo"/>
+                  
+        </hgroup>
+		
+<div class="background">
+  <div class="transbox">
+    <p>STUDENT ENROLLMENT SYSTEM</p>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                  <strong>Login</strong>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-3 control-label">
+                            Email</label>
+                        <div class="col-sm-9">
+                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-3 control-label">
+                            Password</label>
+                        <div class="col-sm-9">
+                            <input type="password" class="form-control" id="pwd" placeholder="Password" 
+                            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox">
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group last">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-success btn-sm">
+                                Sign in</button>
+                                 <button type="reset" class="btn btn-default btn-sm">
+                                Reset</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    Not Registered? <a href="StudentRegistration.html">Register here</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

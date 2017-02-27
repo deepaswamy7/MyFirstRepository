@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Enrollmet system</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+
+  <style>
+
+div.transbox {
+  margin: 30px;
+  background-size: 25%;
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60); 
+}
+
+div.transbox p {
+margin: 30px;
+  font-weight: bold;
+  font-size: 200%;
+  color: #ffffff;
+}
+
+/* CSS used here will be applied after bootstrap.css */
+
+body { 
+margin: 30px;
+
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;
+ color: black;
+}
+
+.panel-default {
+ opacity: 0.9;
+ margin-top:30px;
+}
+.form-group.last {
+ margin-bottom:0px;
+}
+
+</style>
+</head>
+
+<body>
+       
+        
+<form class="form-horizontal" action='reg.jsp' method="post">
+  <fieldset>
+    <div id="legend">
+      <legend class=""><b>Student Registration</b></legend>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label"  for="username">Username</label>
+      <div class="controls">
+        <input type="text" id="username" name="uname" placeholder="" class="input-xlarge" pattern="[a-zA-Z0-9]+" required="Enter alphanumeric format">
+      </div>
+    </div>
+	
+	<div class="control-group">
+      <!-- Student Id -->
+      <label class="control-label"  for="username">Student ID</label>
+      <div class="controls">
+        <input type="text" id="studentid" name="id" placeholder="" class="input-xlarge" pattern="[0-9]{5}" required="Enter numbers only">
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" for="email">E-mail</label>
+      <div class="controls">
+        <input type="email" class="input-xlarge"  id="email" name="email" placeholder="" required>
+        
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Password-->
+      <label class="control-label" for="password">Password</label>
+      <div class="controls">
+        <input type="password" id="password" name="pwd" placeholder="" class="input-xlarge"  pattern="(?=^.{8,15}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="Enter correct password">
+      </div>
+    </div>
+ 
+    <div class="control-group">
+      <!-- Confirm Password -->
+      <label class="control-label"  for="password_confirm">Password (Confirm)</label>
+      <div class="controls">
+        <input type="password" id="password_confirm" name="confirm" placeholder="" class="input-xlarge"  pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="Enter correct password">
+        
+      </div>
+    </div>
+ <br>
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success"><a href="StudentEnroll.html"> Register</a></button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+
+</body>
+</html>

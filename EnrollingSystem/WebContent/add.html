@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add/Drop</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+<style>
+h3{
+   color: #CA226B;
+}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #CA226B;
+}
+
+a.help
+{
+display:block;padding:0 11px;line-height:23px
+}
+
+body {
+	font-family: "Lato", sans-serif;
+    background-image: url("home.jpg");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    margin-right: 10px;
+	
+}
+
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.Header-right{float:right!important
+
+}
+  
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+
+
+
+div {
+    display: block;
+}
+
+hr { background-color: red;}
+
+</style>
+<body>
+<!--
+<div class="right-link tab2" id="user-salutation"><span>|</span><a href="http://www.jabong.com/contact/" class="" data-gaq-event="Header~$~Help">HELP</a><span>|</span></div> -->
+
+
+  <img src="img/bann.jpg" alt="logo" />
+
+<hr>
+
+<h1> Add/Drop Classes</h1>
+<br>
+
+<form method="post" action="add.jsp" >
+    <table align="left">
+      <tr>
+        <td>            			
+            <!--span class="badge"></span--></a> </td> 	
+			<td>
+			<ul>
+				
+			<div class="form-group">
+      <label name="term" class="control-label col-sm-offset-0 col-sm-4" for="Term" >Select Term</label>
+      <div class="col-sm-4 col-md-7">
+        <select name="term" id="term" class="form-control">
+        
+          <option>Fall</option>
+          <option>Spring</option>
+          <option>Summer</option>
+        </select> 
+      </div>
+    </div>
+ 		
+			</ul></td>
+			</tr>
+	<tr><td>	
+	<div>
+			<input type="checkbox" name="course" value="Advanced Software Engineering">Advanced Software Engineering<br>
+			<input type="checkbox" name="course" value="Advanced Operating Systems">Advanced Operating Systems<br>
+			<input type="checkbox" name="course" value="Database Theory & Apps">Database Theory & Apps<br>
+			<input type="checkbox" name="course" value="Big Data">Big Data<br>
+			<input type="checkbox" name="course" value="Compiler Design">Compiler Design<br>
+			<input type="checkbox" name="course" value="Advanced Database">Advanced Database<br>
+			<input type="checkbox" name="course" value="Advanced Algorithms & Data Structures">Advanced Algorithms & Data Structures<br>
+			<input type="checkbox" name="course" value="Computer Networks">Computer Networks<br>
+			<input type="checkbox" name="course" value="Programming Languages">Programming Languages<br>
+			<input type="checkbox" name="course" value="Advanced Web Apps & Services Development">Advanced Web Apps & Services Development<br>
+			<input type="checkbox" name="course" value="SAS Programming">SAS Programming<br>
+			<input type="checkbox" name="course" value="Ethical Hacking">Ethical Hacking<br>
+			<input type="checkbox" name="course" value="Software Testing">Software Testing<br>
+			</div>	
+</tr></td>
+
+<tr><td><br><br>
+<input type="submit" class="btn btn-success" value="Add">&nbsp;&nbsp;&nbsp;
+  <input type="reset" class="btn btn-primary" value="Reset"/><br><br>
+	</tr></td>
+	</table>	
+	</form>				
+					
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+     
+</body>
+</html> 
+
