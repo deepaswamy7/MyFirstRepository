@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Malegaonkar's Icecream</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+<style>
+h1, h2{
+   color: #00BFFF;
+}
+
+h4{
+   color: #FF7143;
+}
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #FF574D;
+}
+
+a.help
+{
+display:block;padding:0 11px;line-height:23px
+}
+
+body {
+	font-family: "Lato", sans-serif;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    margin-right: 10px;
+	
+}
+
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.Header-right{float:right!important
+
+}
+  
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  
+
+
+</style>
+<body>
+
+<img src="images/icelogo.jpg" align="left" alt="ice cream" width="180" height="180">
+&nbsp;&nbsp;&nbsp;&nbsp;<h1>Malegaonkar's Icecream</h1><br>
+
+<ul class="tab">
+   <li><a href="home.html" class="tablinks" onclick="openCity(event, 'Home')">Home</a></li>
+  <li><a href="icecreams.html" class="tablinks" onclick="openCity(event, 'Ice Creams')">Ice Creams</a></li>
+  <li><a href="shakes.html" class="tablinks" onclick="openCity(event, 'Milk Shakes')">Milk Shakes</a></li>
+  <li><a href="floats.html" class="tablinks" onclick="openCity(event, 'Floats')">Floats</a></li>
+</ul>
+
+  
+  <center><h2>Welcome to the world of tasty ice cream flavors</h2></center><br>
+  
+  <img src="images/scoops.jpg" align="right" height="400" width="750">
+  <div>We are the place to present delicious, innovative and fun treats in your celebration of delight. 
+  Named the top most Ice cream and frozen dessert in United States. We create and markets innovative, premium ice cream, 
+  specialty frozen desserts and beverages, providing quality and value to consumers. <br><br>
+  <h4>Share your bliss with our ice creams.</h4></div> 
+	
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+     
+</body>
+</html> 

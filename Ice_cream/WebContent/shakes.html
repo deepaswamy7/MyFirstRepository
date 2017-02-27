@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Malegaonkar's Icecream</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+<style>
+h3{
+   color: #FF7143;
+}
+h1, h2{
+   color: #00BFFF;
+   }
+
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #FF574D;
+}
+
+a.help
+{
+display:block;padding:0 11px;line-height:23px
+}
+
+body {
+	font-family: "Lato", sans-serif;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    margin-right: 10px;
+	
+}
+
+
+/* Float the list items side by side */
+ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.Header-right{float:right!important
+
+}
+  
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  
+
+
+</style>
+<body>
+
+
+<img src="images/icelogo.jpg" align="left" alt="ice cream" width="180" height="180">
+&nbsp;&nbsp;&nbsp;&nbsp;<h1>Malegaonkar's Icecream</h1>
+<br>
+
+<ul class="tab">
+   <li><a href="home.html" class="tablinks" onclick="openCity(event, 'Home')">Home</a></li>
+  <li><a href="icecreams.html" class="tablinks" onclick="openCity(event, 'Ice Creams')">Ice Creams</a></li>
+  <li><a href="shakes.html" class="tablinks" onclick="openCity(event, 'Milk Shakes')">Milk Shakes</a></li>
+  <li><a href="floats.html" class="tablinks" onclick="openCity(event, 'Floats')">Floats</a></li>
+</ul>
+
+
+<!--
+<div id="Ice Creams" class="tabcontent">
+</div>
+
+ <div id="Milk Shakes" class="tabcontent">
+</div> 
+
+<div id="Floats" class="tabcontent">
+</div>
+
+
+<div id="Contact Us" class="tabcontent">
+  <h3>Contact Us</h3>			
+</div>						-->
+
+<div style="width: 85%; border-bottom: 1px dotted #AAAAAA; float: right; padding-top: 6px;">
+                        <div style="width: 20%; float: left; margin-left: 20px;">
+                            <div class="title">
+                                <h2 class="pageTitle">
+                                   Milk Shakes</h2>
+                                <h4 class="pageSubTitle"></h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+   <img src="images/shake1.jpg" align="right" height="400" width="900">
+ <form method="post" action="submit.jsp">
+ <br><br><br>
+
+<h3>Select the milk type</h3>
+  
+  <input type="radio" name="types" value="Skim"> Skim<br>
+  <input type="radio" name="types" value="Whole"> Whole<br>
+  <input type="radio" name="types" value="2% milk"> 2% Milk<br>
+  
+  <h3>Choose the ice cream flavor</h3>
+  
+<input  type="radio" name="flavor" value="Cookies & Cream">Cookies & Cream<br>
+<input  type="radio" name="flavor" value="Cotton Candy">Cotton Candy<br> 
+<input  type="radio" name="flavor" value="Strawberry">Strawberry<br>
+<input  type="radio" name="flavor" value="Pink Bubblegum">Pink Bubblegum<br>
+<input  type="radio" name="flavor" value="German Chocolate">German Chocolate<br><br>
+  
+  Quantity between 1 and 10: <input type="number" name="quantity" min="1" max="10"><br>
+  
+  	<br>	<input type="submit" class="btn btn-success" value="Submit">
+	</form>
+					
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tabcontent.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+     
+</body>
+</html> 
