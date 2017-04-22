@@ -2,10 +2,7 @@ package com.example.controllers;
 
 	import java.util.List;
 
-	import org.hibernate.HibernateException;
-	import org.hibernate.Query;
-	import org.hibernate.Session;
-	import org.hibernate.SessionFactory;
+	
 	import org.springframework.beans.factory.annotation.Autowired;
 	import org.springframework.web.bind.annotation.PathVariable;
 	import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +10,7 @@ package com.example.controllers;
 	import org.springframework.web.bind.annotation.RestController;
 
 	import com.example.model.Orders;
-import com.example.service.OrderService;
+	import com.example.services.OrderService;
 
 	@RestController
 	@RequestMapping("/orders")
@@ -32,5 +29,8 @@ import com.example.service.OrderService;
 		
 		}
 		
-		
+		@RequestMapping(value="/{id}")
+		public Orders getOrder(@PathVariable int id){
+			return orderService.findOne(id);
+		}
 	}
