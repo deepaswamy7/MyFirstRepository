@@ -1,18 +1,13 @@
 package com.example.model;
 
-	import javax.persistence.Access;
-	import javax.persistence.AccessType;
-	import javax.persistence.Column;
-	import javax.persistence.Entity;
-	import javax.persistence.Id;
-	import javax.persistence.JoinColumn;
-	import javax.persistence.ManyToOne;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-
-	@Entity
+@Entity
 	//@NamedNativeQuery(name="customerNames",query="select * from Orders", resultClass=Orders.class)
 	@Table(name="Orders")
-	@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 	public class Orders {	
 		
 	     @Id
@@ -39,13 +34,6 @@ package com.example.model;
 		 }
 
 		
-		 public Users getUsers() {
-			return users;
-		}
-
-		public void setUsers(Users users) {
-			this.users = users;
-		}
 
 		public int getOrderId() {
 		  return orderId;
