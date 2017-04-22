@@ -3,14 +3,15 @@ package com.example.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.websocket.Session;
-
-import org.apache.cxf.service.invoker.SessionFactory;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.example.model.Orders;
 
-public class OrdersDaoImpl {
+@Repository
+public class OrdersDaoImpl implements OrdersDao{
 	
 	@Autowired
 	private SessionFactory sessionFactory;
@@ -19,11 +20,16 @@ public class OrdersDaoImpl {
 		this.sessionFactory=sessionFactory;
 	}
 
-	@SuppressWarnings("unchcked")
 	public List<Orders> findAll(){
 		List<Orders> orders= new ArrayList<Orders>();
 		Session session=sessionFactory.openSession();
-		orders = session.createQuery("From com.example.model.Orders").list();
+		orders = session.createQuery("From com.example.model.Orders ").list();
+		return orders;
+	}
+	
+	public Orders findOne(int id){
+		Session session=sessionFactory.openSession();
+		Orders orders = session.get(Orders.class, id);
 		return orders;
 	}
 	
