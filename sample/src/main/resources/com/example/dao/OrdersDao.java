@@ -8,13 +8,12 @@ import org.springframework.stereotype.Component;
 
 import com.example.model.Orders;
 
-@Component("ordersDao")
 public interface OrdersDao {
 	
-	@Autowired
-	private SessionFactory sessionFactory;
 	
 	 List<Orders> findAll();
+
+	Orders findOne(int id);
 	
 
 	//List<Orders> findByUsers(Users customerId);
