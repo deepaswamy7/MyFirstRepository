@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class EmployeeJDBCInsertExample {
 
-	public static final String INSERT_EMPLOYEE_QUERY = "insert into Employee (empId, name) values (?,?)";
+	public static final String INSERT_EMPLOYEE_QUERY = "insert into Customer_details(Account_Num, Account_Type) values (null,'checking')";
 
-	public static final String INSERT_ADDRESS_QUERY = "insert into Address (empId, address, city, country) values (?,?,?,?)";
+	public static final String INSERT_ADDRESS_QUERY = "insert into Customer (Cus_Name, Gender, Age, Address, Contact_Num, balance) values ('Deepa','F','22','Overland','979831541','1210')";
 
 	public static void main(String[] args) {
 
